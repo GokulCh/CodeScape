@@ -8,12 +8,11 @@
   }
 
   :root {
-    --h1: 3rem;
-    --h2: 2rem;
-    --subtitle: 1.5rem;
-    --p: 1.125rem;
+    --h1: 48px;
+    --h2: 32px;
+    --h3: 24px;
+    --p: 18px;
 }
-
 
 /* Star selector: targets the entire content of the html file */
 * {
@@ -26,13 +25,7 @@ html {
 }
 
 body {
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100vh;
     margin: 0 12%;
-    gap: 4em;
-    width: auto !important;
 
     font-family: "Roboto", sans-serif;
     color: var(--text);
@@ -41,130 +34,166 @@ body {
     scroll-behavior: smooth;
 }
 
-header {
-  margin-top: .5rem;
-  margin-bottom: .5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* navbar */
-.navbar {
+/* Navigation Bar */
+nav {
+    margin-top: 8px;
+    margin-bottom: 8px;
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navbar a {
-  color: var(--text);
-  margin-left: 60px;
-  font-size: 1.3rem;
-  font-weight: 300;
-  text-decoration: none;
-}
-
-.logo {
-    font-size: 1.5rem;
+nav .logo {
+    font-size: var(--h3);
     font-weight: 600;
     color: var(--text);
     text-decoration: none;
 }
 
-/* hero */
-.hero-container {
-    margin-top: 4.5rem;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 4.5rem;
-  }
+nav .bar {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav .bar a{
+    margin-left: 60px;
+    font-size: var(--h3);
+    font-weight: 300;
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* Toolbar */
+/* .toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  height: 8%;
+  width: 50%;
+  margin-bottom: 1%;
+  border-radius: 3rem;
+  transform: translateX(-50%);
+  background: #242e41;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.icon {
+  margin: 0 1rem; 
+}
+
+.icon i {
+  margin-top: 100%;
+  font-size: 24px;
+  color: white;
+} */
+
+ 
+/* Hero */
+.hero .container {
+  margin-top: 72px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
 
 h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    color: #ecf0f9;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ecf0f9;
 }
 
 h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ecf0f9;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ecf0f9;
 }
 
 h3 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: #ecf0f9;
+font-size: 1.5rem;
+font-weight: 300;
+color: #ecf0f9;
 }
 
 h4 {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #ecf0f9;
+font-size: 1.2rem;
+font-weight: 300;
+color: #ecf0f9;
 }
 
-.hero-container .hero-text h3 {
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #ecf0f9;
-}
-
-.hero-container .hero-gradient-text {
+.hero .container .introduction .gtext {
   background: linear-gradient(45deg, #294d8e, #4976ca);
   -webkit-background-clip: text;
   color: transparent;
 }
 
-.hero-container .hero-text .button {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #ecf0f9;
+.hero .container .introduction h3 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 
-    display: inline-block;
-    border-radius: .5rem;
-    
-    margin-right: 1.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding: 1.2rem 2rem;
-    
-    text-decoration: none;
-    transition: box-shadow 0.3s ease-in-out;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #ecf0f9;
 }
 
-/* hero buttons */
-.hero-container .hero-text .button1 {
-  background-color: var(--primary);
+.hero .container a {
+  display: inline-block;
+  margin-right: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ecf0f9;
+  border: none;
+  border-radius: .8rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.hero .container .introduction .button1 {
+  background-color: #294d8e;
   animation: float1 3s ease-in-out infinite;
 }
 
-.hero-container .hero-text .button2 {
-  background-color: var(--secondary);
+.hero .container .introduction .button2 {
+  background-color: #101e37;
 }
 
-.hero-container .hero-text .button:hover {
-  box-shadow: 0 0rem 2rem rgba(73, 118, 202, 35%);
+.hero .container .introduction .button1:hover {
+  box-shadow: 0 0rem 2rem rgb(73, 118, 202, 40%);
 }
 
-.hero-container .hero-img {
-    animation: float2 3s ease-in-out infinite;
+.hero .container .introduction .button2:hover {
+  box-shadow: 0 0rem 2rem rgba(61, 98, 167, 40%);
 }
 
-.hero-container .more-info {
-    animation: scroll 3s ease-in-out infinite;
+.hero .container .introduction .scroll-more {
+  animation: scroll 3s ease-in-out infinite;
 }
 
-/* explanation */
-
-.explanation .ex-1{
-  margin-top: 20rem;
-  text-align: center;
+.hero .container .graphic {
+  animation: float2 3s ease-in-out infinite;
 }
 
+/* Functionality */
+.functionality .container {
+  
 
-/* styles */
+}
+
+/* Get Started */
+
+/* Statistics */
+
+/* Styles */
 @keyframes scroll {
   0% {
     opacity: 0;
