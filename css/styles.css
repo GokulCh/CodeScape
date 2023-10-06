@@ -34,6 +34,30 @@ body {
     scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ecf0f9;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ecf0f9;
+}
+
+h3 {
+font-size: 1.5rem;
+font-weight: 300;
+color: #ecf0f9;
+}
+
+h4 {
+font-size: 1.2rem;
+font-weight: 300;
+color: #ecf0f9;
+}
+
 /* Navigation Bar */
 nav {
     margin-top: 8px;
@@ -63,67 +87,12 @@ nav .bar a{
     color: var(--text);
     text-decoration: none;
 }
-
-/* Toolbar */
-/* .toolbar {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  height: 8%;
-  width: 50%;
-  margin-bottom: 1%;
-  border-radius: 3rem;
-  transform: translateX(-50%);
-  background: #242e41;
-}
-
-.icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.icon {
-  margin: 0 1rem; 
-}
-
-.icon i {
-  margin-top: 100%;
-  font-size: 24px;
-  color: white;
-} */
-
  
 /* Hero */
 .hero .container {
   margin-top: 72px;
   display: grid;
   grid-template-columns: 1fr auto;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #ecf0f9;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ecf0f9;
-}
-
-h3 {
-font-size: 1.5rem;
-font-weight: 300;
-color: #ecf0f9;
-}
-
-h4 {
-font-size: 1.2rem;
-font-weight: 300;
-color: #ecf0f9;
 }
 
 .hero .container .introduction .gtext {
@@ -147,32 +116,25 @@ color: #ecf0f9;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   padding: 1.2rem 1.5rem;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
   color: #ecf0f9;
   border: none;
-  border-radius: .8rem;
+  border-radius: 1rem;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
 }
 
 
-.hero .container .introduction .button1 {
+.hero .container .introduction .get-started {
   background-color: #294d8e;
-  animation: float1 3s ease-in-out infinite;
+  box-shadow: 0 0rem 2rem rgb(73, 118, 202, 30%);
 }
 
-.hero .container .introduction .button2 {
+.hero .container .introduction .get-started:hover {
+  box-shadow: 0 0rem 1.5rem rgb(73, 118, 202, 20%);
+}
+
+.hero .container .introduction .how-does-it-work {
   background-color: #101e37;
-}
-
-.hero .container .introduction .button1:hover {
-  box-shadow: 0 0rem 2rem rgb(73, 118, 202, 40%);
-}
-
-.hero .container .introduction .button2:hover {
-  box-shadow: 0 0rem 2rem rgba(61, 98, 167, 40%);
 }
 
 .hero .container .introduction .scroll-more {
@@ -180,7 +142,7 @@ color: #ecf0f9;
 }
 
 .hero .container .graphic {
-  animation: float2 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* About */
@@ -188,10 +150,6 @@ color: #ecf0f9;
   
 
 }
-
-/* Get Started */
-
-/* Statistics */
 
 /* Styles */
 @keyframes scroll {
@@ -211,24 +169,12 @@ color: #ecf0f9;
   }
 }
 
-@keyframes float1 {
-    0% {
-      transform: translatey(0rem);
-    }
-    50% {
-      transform: translatey(-.4rem);
-    }
-    100% {
-      transform: translatey(0rem);
-    }
-  }
-
-@keyframes float2 {
+@keyframes float {
   0% {
     transform: translatey(0rem);
   }
   50% {
-    transform: translatey(-1rem);
+    transform: translatey(-.5rem);
   }
   100% {
     transform: translatey(0rem);
